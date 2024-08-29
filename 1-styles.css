@@ -1,0 +1,25 @@
+/* 1-styles.css */
+
+/* Initially, hide the underline for the anchor tag */
+a {
+    text-decoration: none;
+    position: relative;
+    color: #b10000; /* Ensure the text color is set */
+}
+
+/* Create the underline effect using a pseudo-element */
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Set the thickness of the underline */
+    left: 0;
+    bottom: -2px; /* Position it slightly below the text */
+    background-color:  #b10000;  /* Color of the underline */
+    transition: width 0.3s ease-in-out; /* Controls the speed of the animation */
+}
+
+/* On hover, reveal the underline */
+a:hover::after {
+    width: 100%;
+}
